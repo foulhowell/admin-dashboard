@@ -1,0 +1,252 @@
+:root {
+    --primary-color: #f87171;
+    --secondary-color: #3b82f6;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr auto;
+}
+
+.sidebar {
+    grid-row: 1 / 3;
+    grid-column: 0 / 1;
+    background-color: var(--primary-color);
+    display: grid;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding-left: 12px;
+}
+
+.sidebar h3 {
+    font-size: 1.4em;
+}
+
+.sidebar h3 img {
+    height: 1.4em;
+    vertical-align: text-bottom;
+    padding-right: 12px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    display: grid;
+    gap: 16px;
+    grid-template-rows: repeat(autofit, 1fr);
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.sidebar img {
+    vertical-align: middle;
+    padding-right: 12px;
+}
+
+.header {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    background-color: white;
+    height: fit-content;
+    display: grid;
+    gap: 4px;
+    grid-template-rows: 1fr 2fr;
+    box-shadow: 10px 5px 5px gray;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.header-top .top-right {
+    justify-self: flex-end;
+    padding-right: 5%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.header-top .profile-pic {
+    height: 35px;
+    width: 35px;
+}
+
+.header-top .search-bar {
+    background-color: lightgray;
+    border-radius: 40px;
+    border: none;
+    width: 500px;
+}
+
+.search-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+
+}
+
+.header-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+}
+
+.header-bottom .profile-pic {
+    height: 75px;
+}
+
+.header-bottom button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 24px;
+    height: 2em;
+    width: 5.5em;
+}
+
+.header-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header-welcome p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.header-welcome h2 {
+    margin: 0;
+}
+
+.header-bottom-right {
+    justify-self: flex-end;
+    align-items: center;
+    display: flex;
+    gap: 22px;
+}
+
+.content {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    background-color: rgba(226,232,240,255);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.projects {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+}
+
+.projects h2 {
+}
+
+.project-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: left;
+    border-radius: 10px;
+    padding: 40px 20px 10px;
+    height: 175px;
+    border-left: 10px solid var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.card p {
+    color: rgb(49, 46, 46);
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+}
+
+.card .title {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+}
+
+.card .card-images {
+    display: flex;
+    gap: 18px;
+    align-self: flex-end;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.announcements {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.announce-box {
+    background-color: white;
+    color: black;
+    padding: 18px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 0;
+    box-shadow: 5px 5px 5px gray;
+
+}
+
+.announce-box p {
+    color: rgb(49, 46, 46);
+}
+
+.trending {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.trend-box {
+    background-color: white;
+    color: black;
+    padding: 18px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 0;
+    box-shadow: 5px 5px 5px gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.trend-user p {
+    color: rgb(49, 46, 46);
+}
+
+.trend-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.trend-user-text {
+    display: flex;
+}
